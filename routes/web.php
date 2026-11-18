@@ -22,4 +22,4 @@ Route::get("/books",[BookController::class, "index"]);
 Route::get("/addbook",[BookController::class, "create"]);
 Route::post("/addbook",[BookController::class, "store"]);
 // route wildcards
-Route::delete('/deletebook/{id}',[BookController::class, "destroy"]);
+Route::delete('/books/{id}/delete',[BookController::class, "destroy"]);

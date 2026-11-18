@@ -26,7 +26,7 @@
                     <td>{{ $book->price }}</td>
                     <td>{{ $book->author }}</td>
                     <td>
-                        <form action="/deletebook/{{$book->id}}" method="POST">
+                        <form action="/books/{{$book->id}}/delete" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Delete</button>
