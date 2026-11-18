@@ -21,12 +21,13 @@
         <tbody>
              @foreach($books as $book)
                 <tr>
-                    <td>{{ $book->title }}</td>
+                    <td><a href="/books/{{$book->id}}">{{ $book->title }}</a></td>
                     <td>{{ $book->pages }}</td>
                     <td>{{ $book->price }}</td>
                     <td>{{ $book->author }}</td>
                     <td>
-                        <form action="/books/{{$book->id}}/delete" method="POST">
+                        <form action="/books/{{$book->id}}/delete" method="POST"
+                            onclick="return confirm('Are you sure?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Delete</button>

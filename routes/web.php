@@ -23,3 +23,5 @@ Route::get("/addbook",[BookController::class, "create"]);
 Route::post("/addbook",[BookController::class, "store"]);
 // route wildcards
 Route::delete('/books/{id}/delete',[BookController::class, "destroy"]);
+
+Route::get("/books/{id}",[BookController::class,"show"]);   
