@@ -31,6 +31,10 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit">Delete</button>
+                        </form> | 
+                        <form action="/books/{{$book->id}}/edit" method="POST">
+                            @csrf
+                            <button type="submit">Edit</button>
                         </form>
                     </td>
                 </tr>

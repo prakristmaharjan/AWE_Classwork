@@ -25,3 +25,4 @@ Route::post("/addbook",[BookController::class, "store"]);
 Route::delete('/books/{id}/delete',[BookController::class, "destroy"]);
 
 Route::get("/books/{id}",[BookController::class,"show"]);   
+Route::get("/books/{id}/edit",[BookController::class,"edit"]);   

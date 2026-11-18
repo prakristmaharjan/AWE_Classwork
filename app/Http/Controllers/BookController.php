@@ -57,9 +57,10 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Book $book)
+    public function edit($id)
     {
-        //
+        $thisbook=Book::find($id);
+        return view("edit",['book'=>$thisbook]);
     }
 
     /**
