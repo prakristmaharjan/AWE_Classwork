@@ -9,7 +9,9 @@
     <h1>Edit Books</h1>
     <p><a href="/books">All Books</a></p>
 
-    <form method="POST" action="/addbook">
+    <form method="POST" action="/books/{{$book->id}}/edit">
+        @csrf
+        @method('PUT')
         <label>Book title: </label>
         <input type="text" name="title" value="{{$book->title}}"/> <br><br>
         <label>Book pages: </label>

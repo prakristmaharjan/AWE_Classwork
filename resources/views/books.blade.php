@@ -31,11 +31,8 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit">Delete</button>
-                        </form> | 
-                        <form action="/books/{{$book->id}}/edit" method="POST">
-                            @csrf
-                            <button type="submit">Edit</button>
-                        </form>
+                        </form> 
+                        <a href="/books/{{$book->id}}/edit">Edit</a>
                     </td>
                 </tr>
             @endforeach

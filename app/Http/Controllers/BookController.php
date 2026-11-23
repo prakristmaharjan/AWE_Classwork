@@ -66,9 +66,22 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Book $id)
     {
-        //
+        $incomingFields=$request->validate([
+            'title'=>'required|max:225',
+            'pages'=>'required',
+            'price'=>'required',
+            'author'=>'required'
+        ]);
+
+        $id->update([
+            'title' => $incomingFields['title'],
+            'pages' => $incomingFields['pages'],
+            'price' => $incomingFields['price'],
+            'author' => $incomingFields['author'],
+        ]);
+        return redirect("/books");
     }
 
     /**

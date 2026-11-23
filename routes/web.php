@@ -26,3 +26,4 @@ Route::delete('/books/{id}/delete',[BookController::class, "destroy"]);
 
 Route::get("/books/{id}",[BookController::class,"show"]);   
 Route::get("/books/{id}/edit",[BookController::class,"edit"]);   
+Route::put("/books/{id}/edit",[BookController::class,"update"]);   
